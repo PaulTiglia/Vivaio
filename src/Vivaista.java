@@ -1,14 +1,12 @@
 public class Vivaista {
     private String nome;
-    private Genere[] generi = new Genere[100];
+    private String genere;
 
-    public Vivaista(){
 
-    }
 
-    public Vivaista(String nome, Genere[] generi){
+    public Vivaista(String nome, String genere){
         this.nome = nome;
-        this.generi = generi;
+        this.genere = genere;
     }
 
     public String getNome() {

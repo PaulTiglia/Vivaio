@@ -1,9 +1,9 @@
 public class Pianta {
     private String codice;
-    private Genere genere;
+    private String genere;
     private String data;
 
-    public Pianta(String codice, Genere genere, String data){
+    public Pianta(String codice, String genere, String data){
         this.codice = codice;
         this.genere = genere;
         this.data = data;
@@ -23,11 +23,11 @@ public class Pianta {
         this.codice = codice;
     }
 
-    public Genere getGenere() {
+    public String getGenere() {
         return genere;
     }
 
-    public void setGenere(Genere genere) {
+    public void setGenere(String genere) {
         this.genere = genere;
     }
 

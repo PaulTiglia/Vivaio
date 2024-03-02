@@ -2,9 +2,10 @@ public class Vivaio {
     private Vivaista[] vivaisti = new Vivaista[10];
     private Pianta[] piante = new Pianta[1000];
     private Genere[] generi = new Genere[50];
+    private Ordine[] ordini = new Ordine[1000];
 
-    Genere rosa = new Genere("rosa", 2.50, true, false);
-    Genere palma = new Genere("palma", 5.00, false, false);
+    Genere rosa = new Genere("rosa", 2.50);
+    Genere palma = new Genere("palma", 5.00);
 
     public boolean aggiungiVivaista(Vivaista vivaista){
         for (int i = 0; i < vivaisti.length; i++) {
@@ -30,6 +31,17 @@ public class Vivaio {
         for (int i = 0; i < generi.length; i++) {
             if(generi[i] == null){
                 generi[i] = genere;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean aggiungiOrdine(Ordine ordine, String codice){
+        for (int i = 0; i < generi.length; i++) {
+            if(ordini[i] == null){
+                ordini[i] = ordine;
+                eliminaPianta(codice);
                 return true;
             }
         }
